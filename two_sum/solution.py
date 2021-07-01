@@ -7,8 +7,8 @@ class Solution:
         """
         for i in range(len(nums)-1):
             n = target - nums[i]
-            if n in nums[i+1:]:
+            try:
                 j = nums.index(n, i+1)
                 return [i, j]
-            else:
+            except:
                 continue
